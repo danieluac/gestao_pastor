@@ -3,7 +3,7 @@
     'name': "gestao_pastor",
     'summary': """ """,
     'description': """  """,
-    'author': "NeomiJoe ",
+    'author': "Daniel AC  ",
     'website': " ",
     'category': 'Igreja',
     'version': '0.1',
