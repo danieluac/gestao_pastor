@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!-- actions opening views on models -->
+
+
+
+    <!-- server action to the one above -->
+
+<!--    <record model="ir.actions.server" id="gestao_pastor.action_server">-->
+<!--      <field name="name">gestao_pastor server</field>-->
+<!--      <field name="model_id" ref="model_gestao_pastor_gestao_pastor"/>-->
+<!--      <field name="state">code</field>-->
+<!--      <field name="code">-->
+<!--        action = {-->
+<!--          "type": "ir.actions.act_window",-->
+<!--          "view_mode": "tree,form",-->
+<!--          "res_model": model._name,-->
+<!--        }-->
+<!--      </field>-->
+<!--    </record>-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="gestao_pastor" id="gestao_pastor.menu_root"/>
+    <!-- menu categories -->
+
+    <menuitem name="Menu 1" id="gestao_pastor.menu_1" parent="gestao_pastor.menu_root"/>
+    <menuitem name="Menu 2" id="gestao_pastor.menu_2" parent="gestao_pastor.menu_root"/>
+-->
+    <!-- actions -->
+
+    <menuitem name="List" id="gestao_pastor.menu_1_list" parent="gestao_pastor.menu_1"
+              action="gestao_pastor.action_window"/>
+    <menuitem name="Server to list" id="gestao_pastor" parent="gestao_pastor.menu_2"
+              action="gestao_pastor.action_server"/>
+-->
+  </data>
+</odoo>

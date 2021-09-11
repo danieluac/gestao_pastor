@@ -1,0 +1,163 @@
+<odoo>
+    <data>
+
+        <!--FORM View-->
+        <record model="ir.ui.view" id="pastor_form_view">
+            <field name="name">Pastor form</field>
+            <field name="model">pastor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="photo" widget='image' class="oe_avatar"/>
+                        <h1 style="font-size: 20px;font-weight: 400;text-transform: uppercase;">
+                            <field name="name"/>
+                        </h1>
+
+                        <notebook>
+                            <page string="Dados Pessoais">
+                                <group>
+                                    <group>
+                                        <field name="date_born"/>
+                                        <field name="gender"/>
+                                        <field name="marital_status"/>
+                                        <field name="consecration_date"/>
+                                        <field name="paroquia_id"/>
+                                    </group>
+                                    <group>
+
+                                        <field name="contact"/>
+                                        <field name="email"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Cultos">
+                                <field name="culto_id">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="data"/>
+                                        <field name="tema"/>
+                                        <field name="membros_admitidos"/>
+                                        <field name="paroquia_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Escalas">
+                                <field name="escala_id">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="foi_realizado"/>
+                                        <field name="data_agendada"/>
+                                        <field name="paroquia_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--TREE View-->
+        <record model="ir.ui.view" id="pastor_list">
+            <field name="name">Pastor list</field>
+            <field name="model">pastor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="photo" widget='image' class="oe_avatar"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="consecration_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--KANBAN View-->
+        <record model="ir.ui.view" id="pastor_kanban">
+            <field name="name">Pastor list</field>
+            <field name="model">pastor</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="consecration_date"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class=" kanban-priest-box col-12 mt-2 oe_kanban_global_click o_kanban_record"
+                                 t-attf-style="background-color:#7C7BAD21">
+                                <div class="row">
+                                    <div class="col-4 boder-danger ">
+                                        <field name="photo" widget='image' class="oe_avatar"/>
+                                    </div>
+                                    <div class="col-8 pt-3" style="padding: 0px;">
+                                        <p class="style">
+                                            Pastor:
+                                            <field name="name"/>
+                                        </p>
+                                        <p class="style">
+                                            Paroquia:
+                                            <field name="paroquia_id"/>
+                                        </p>
+                                        <p class="style">
+                                            Consagrado:
+                                            <field name="consecration_date"/>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--Search View-->
+        <record id="pastor_search_view" model="ir.ui.view">
+            <field name="name">Pastor Search</field>
+            <field name="model">pastor</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field string="Nome" name="name"/>
+                    <field string="Paroquia" name="paroquia_id"/>
+                    <field string="Culto" name="culto_id"/>
+                    <field string="Escala" name="escala_id"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="marital_status" string="Estado Civil"
+                                context="{'group_by':'marital_status'}"/>
+                        <filter name="paroquia" string="Paroquia"
+                                context="{'group_by':'paroquia_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!--Graph View-->
+        <record id="pastor_graph" model="ir.ui.view">
+            <field name="name">Pastor Graph View</field>
+            <field name="model">pastor</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field string="Nome" name="name" type="row"/>
+                    <field name="escala_id" type="measure"/>
+                    <field name="culto_id" type="measure"/>
+                    <field name="paroquia_id" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="pastor_action_window">
+            <field name="name">Pastores</field>
+            <field name="res_model">pastor</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="search_view_id" ref="pastor_search_view"/>
+            <field name="context">{ 'search_default_paroquia': 1}</field>
+        </record>
+        <menuitem action="pastor_action_window" name="Pastor" id="pastor_menu_root"/>
+
+    </data>
+
+</odoo>

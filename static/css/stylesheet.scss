@@ -1,0 +1,38 @@
+
+div.kanban-priest-box{
+    div.o_field_image {
+        img[name='photo']{
+              height: 70px;
+             width: 70px;
+        }
+    }
+    p.style{
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0px;
+
+        span{
+                font-weight: normal;
+        }
+    }
+}
+
+div.o_list_view{
+    table {
+        tbody{
+                td.o_image_cell {
+                    div.o_field_image  img[name="photo"]{
+                        width: 30px;
+                        height: 25px;
+                    }
+                }
+        }
+    }
+}
+
+div.o_pivot{
+    table{
+        width: 100%;
+    }
+
+}

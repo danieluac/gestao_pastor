@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+
+        <!--FORM View-->
+        <record model="ir.ui.view" id="escala_form_view">
+            <field name="name">escala form</field>
+            <field name="model">escala</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1 style="font-size: 20px;font-weight: 400;text-transform: uppercase;">
+                            <field name="name" readonly="1"/>
+                        </h1>
+
+                        <notebook>
+                            <page string="Dados de Escala">
+                                <group>
+                                    <group>
+                                        <field name="data_agendada"/>
+                                        <field name="foi_realizado"/>
+                                    </group>
+                                    <group>
+                                        <field name="pastor_escalado_id"/>
+                                        <field name="paroquia_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--TREE View-->
+        <record model="ir.ui.view" id="escala_list">
+            <field name="name">escala list</field>
+            <field name="model">escala</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="data_agendada"/>
+                    <field name="foi_realizado"/>
+                    <field name="pastor_escalado_id"/>
+                    <field name="paroquia_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Search View-->
+        <record id="escala_search_view" model="ir.ui.view">
+            <field name="name">escala Search</field>
+            <field name="model">escala</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field string="Nome" name="name"/>
+                    <field string="Paroquia" name="paroquia_id"/>
+                    <field string="Pastor" name="pastor_escalado_id"/>
+                    <field string="Escala" name="data_agendada"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="pastor_escalado_id" string="Pastor"
+                                context="{'group_by':'pastor_escalado_id'}"/>
+                        <filter name="paroquia" string="Paroquia"
+                                context="{'group_by':'paroquia_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!--Graph View-->
+        <record id="escala_graph" model="ir.ui.view">
+            <field name="name">escala Graph View</field>
+            <field name="model">escala</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field string="Nome" name="name" type="row"/>
+                    <field name="data_agendada" type="measure"/>
+                    <field name="pastor_escalado_id" type="measure"/>
+                    <field name="paroquia_id" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="escala_action_window">
+            <field name="name">escalas</field>
+            <field name="res_model">escala</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="search_view_id" ref="escala_search_view"/>
+<!--            <field name="context">{ 'search_default_paroquia': 1}</field>-->
+        </record>
+        <menuitem action="escala_action_window" name="Escalas" parent="pastor_menu_root"  id="escala_menu_root"/>
+
+    </data>
+
+</odoo>

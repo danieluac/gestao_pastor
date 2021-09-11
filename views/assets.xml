@@ -1,0 +1,9 @@
+<odoo>
+    <template id="assets_backend" name="stylesheet gestao_pastor" inherit_id="web.assets_backend">
+         <xpath expr="." position="inside">
+             <link rel="stylesheet" href="/gestao_pastor/static/css/stylesheet.scss"/>
+<!--            <script type="text/javascript" src="/mail_activity_bycoders/static/src/js/activity_mark_done_popover.js"/>-->
+        </xpath>
+    </template>
+
+</odoo>

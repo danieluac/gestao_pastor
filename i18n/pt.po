@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gestao_pastor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-25 21:08+0000\n"
+"PO-Revision-Date: 2021-08-25 21:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gestao_pastor
+#: model:ir.model.fields.selection,name:gestao_pastor.selection__pastor__marital_status__casado
+msgid "Casado"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_kanban
+msgid "Consagrado:"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__create_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__create_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__create_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__create_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__create_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__create_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Culto"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_form_view
+msgid "Cultos"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__culto_id
+msgid "Cultos Dirigidos"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_form_view
+msgid "Dados Pessoais"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__consecration_date
+msgid "Data da consagração"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__date_born
+msgid "Data de nascimento"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__data
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__data_agendada
+msgid "Data realizado"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__display_name
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__display_name
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__display_name
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__email
+msgid "Email"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_graph
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Escala"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__escala_id
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_form_view
+msgid "Escalas"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__marital_status
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Estado Civil"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields.selection,name:gestao_pastor.selection__pastor__gender__f
+msgid "Femenino"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__foi_realizado
+msgid "Foi realizado?"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__photo
+msgid "Foto"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__gender
+msgid "Genero"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:res.groups,name:gestao_pastor.priest_management_group_manager
+msgid "Gestor"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.module.category,name:gestao_pastor.priest_management_category
+msgid "Gestão De Pastor"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__id
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__id
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__id
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__id
+msgid "ID"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto____last_update
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala____last_update
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia____last_update
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__write_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__write_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__write_uid
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__write_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__write_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__write_date
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__location
+msgid "Localização"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields.selection,name:gestao_pastor.selection__pastor__gender__m
+msgid "Masculino"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__membros_admitidos
+msgid "Membros admitidos"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__name
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__name
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Nome"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__name
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__name
+msgid "Número"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__paroquia_id
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__paroquia_id
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__paroquia_id
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Paroquia"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_kanban
+msgid "Paroquia:"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.actions.act_window,name:gestao_pastor.pastor_action_window
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__pastor_dirigente_id
+#: model:ir.model.fields,field_description:gestao_pastor.field_escala__pastor_escalado_id
+#: model:ir.ui.menu,name:gestao_pastor.pastor_menu_root
+msgid "Pastor"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_kanban
+msgid "Pastor:"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_paroquia__pastor_id
+msgid "Pastores"
+msgstr ""
+
+#. module: gestao_pastor
+#: model_terms:ir.ui.view,arch_db:gestao_pastor.pastor_search_view
+msgid "Search"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields.selection,name:gestao_pastor.selection__pastor__marital_status__solteiro
+msgid "Solteiro"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_pastor__contact
+msgid "Telefone:"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields,field_description:gestao_pastor.field_culto__tema
+msgid "Tema do culto"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:res.groups,name:gestao_pastor.priest_management_group_user
+msgid "Utilizador"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model.fields.selection,name:gestao_pastor.selection__pastor__marital_status__viuvo
+msgid "Viuvo"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model,name:gestao_pastor.model_culto
+msgid "tabela onde serão cadastradas as informações de cultos"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model,name:gestao_pastor.model_escala
+msgid "tabela onde serão cadastradas as informações de escala"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model,name:gestao_pastor.model_paroquia
+msgid "tabela onde serão cadastradas as informações de paroquias"
+msgstr ""
+
+#. module: gestao_pastor
+#: model:ir.model,name:gestao_pastor.model_pastor
+msgid "tabela onde serão cadastradas as informações de pastores da igreja"
+msgstr ""

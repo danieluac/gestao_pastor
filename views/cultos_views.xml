@@ -1,0 +1,106 @@
+<odoo>
+    <data>
+        <!--FORM View-->
+        <record model="ir.ui.view" id="culto_form_view">
+            <field name="name">culto form</field>
+            <field name="model">culto</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1 style="font-size: 20px;font-weight: 400;text-transform: uppercase;">
+                            <field name="name" readonly="1"/>
+                        </h1>
+                        <notebook>
+                            <page string="Dados de Culto">
+                                <group>
+                                    <group>
+                                        <field name="tema"/>
+                                        <field name="data"/>
+                                        <field name="membros_admitidos"/>
+                                    </group>
+                                    <group>
+                                        <field name="pastor_dirigente_id"/>
+                                        <field name="paroquia_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--TREE View-->
+        <record model="ir.ui.view" id="culto_list">
+            <field name="name">culto list</field>
+            <field name="model">culto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="tema"/>
+                    <field name="membros_admitidos"/>
+                    <field name="pastor_dirigente_id"/>
+                    <field name="paroquia_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Search View-->
+        <record id="culto_search_view" model="ir.ui.view">
+            <field name="name">culto Search</field>
+            <field name="model">culto</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field string="Nome" name="name"/>
+                    <field string="Paroquia" name="paroquia_id"/>
+                    <field string="Pastor dirigente" name="pastor_dirigente_id"/>
+                    <field string="Tema" name="tema"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="pastor_dirigente_id" string="Por Pastor"
+                                context="{'group_by':'pastor_dirigente_id'}"/>
+                        <filter name="paroquia_id" string="Paroquia"
+                                context="{'group_by':'paroquia_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!--Graph View-->
+        <record id="culto_graph" model="ir.ui.view">
+            <field name="name">culto Graph View</field>
+            <field name="model">culto</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field string="Membros Admitidos" name="membros_admitidos" type="row"/>
+                    <field name="pastor_dirigente_id" type="row"/>
+                    <field name="paroquia_id" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+          <record id="culto_pivot" model="ir.ui.view">
+            <field name="name">culto Pivot View</field>
+            <field name="model">culto</field>
+            <field name="arch" type="xml">
+                <pivot string="cultos">
+                    <field string="Membros Admitidos" name="membros_admitidos" type="measure"/>
+                    <field string="Paroquias" name="paroquia_id" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="culto_action_window">
+            <field name="name">Cultos</field>
+            <field name="res_model">culto</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+            <field name="search_view_id" ref="culto_search_view"/>
+<!--            <field name="context">{ 'search_default_paroquia_id': 1}</field>-->
+        </record>
+        <menuitem action="culto_action_window" name="Cultos" parent="pastor_menu_root" id="culto_menu_root"/>
+
+    </data>
+
+</odoo>

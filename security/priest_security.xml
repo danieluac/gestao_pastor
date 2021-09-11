@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <record id="priest_management_category" model="ir.module.category">
+            <field name="name">Gestão De Pastor</field>
+        </record>
+        <record id="priest_management_group_user" model="res.groups">
+            <field name="name">Utilizador</field>
+            <field name="category_id" ref="priest_management_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <!---->
+        <record id="priest_management_group_manager" model="res.groups">
+            <field name="name">Gestor</field>
+            <field name="category_id" ref="priest_management_category"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <!-- PASTOR REGRAS DE ACESSO -->
+        <record id="priest_management_user_access" model="ir.model.access">
+            <field name="name">User - Access</field>
+            <field name="model_id" ref="model_pastor"/>
+            <field name="group_id" ref="priest_management_group_user"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="0" name="perm_unlink"/>
+        </record>
+        <!--   -->
+        <record id="priest_management_manager_access" model="ir.model.access">
+            <field name="name">Manager -Access</field>
+            <field name="model_id" ref="model_pastor"/>
+            <field name="group_id" ref="priest_management_group_manager"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_unlink"/>
+        </record>
+
+        <!-- PAROQUIA ACCESS -->
+        <record id="church_management_user_access" model="ir.model.access">
+            <field name="name">User - Access</field>
+            <field name="model_id" ref="model_paroquia"/>
+            <field name="group_id" ref="priest_management_group_user"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="0" name="perm_unlink"/>
+        </record>
+        <!--   -->
+        <record id="church_management_manager_access" model="ir.model.access">
+            <field name="name">Manager -Access</field>
+            <field name="model_id" ref="model_paroquia"/>
+            <field name="group_id" ref="priest_management_group_manager"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_unlink"/>
+        </record>
+
+           <!-- CULTOS ACCESS -->
+        <record id="culto_management_user_access" model="ir.model.access">
+            <field name="name">User - Access</field>
+            <field name="model_id" ref="model_culto"/>
+            <field name="group_id" ref="priest_management_group_user"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="0" name="perm_unlink"/>
+        </record>
+        <!--   -->
+        <record id="culto_management_manager_access" model="ir.model.access">
+            <field name="name">Manager -Access</field>
+            <field name="model_id" ref="model_culto"/>
+            <field name="group_id" ref="priest_management_group_manager"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_unlink"/>
+        </record>
+
+          <!-- ESCALAS ACCESS -->
+        <record id="escala_management_user_access" model="ir.model.access">
+            <field name="name">User - Access</field>
+            <field name="model_id" ref="model_escala"/>
+            <field name="group_id" ref="priest_management_group_user"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="0" name="perm_unlink"/>
+        </record>
+        <!--   -->
+        <record id="escala_management_manager_access" model="ir.model.access">
+            <field name="name">Manager -Access</field>
+            <field name="model_id" ref="model_escala"/>
+            <field name="group_id" ref="priest_management_group_manager"/>
+            <field eval="1" name="perm_create"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_unlink"/>
+        </record>
+
+    </data>
+
+
+</odoo>
